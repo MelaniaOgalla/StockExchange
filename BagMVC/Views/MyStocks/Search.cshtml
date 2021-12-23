@@ -1,0 +1,54 @@
+﻿@model SearchMyStocksViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Search of Stocks</h1>
+<div class="row">
+    <form asp-action="Search">
+        <label asp-for="Text">Search</label>
+        <input asp-for="Text" />    
+        <span asp-validation-for="Text" class = "text-danger"></span>
+        <input type="submit" value="Search" />
+    </form>
+</div>
+@if (Model != null && Model.rootBestMatches.IsError)
+{
+    <div class="alert-danger">
+        @Model.rootBestMatches.Error
+
+    </div>
+}
+else if( Model != null)
+{
+
+<h3>Coincidences: </h3>
+<div class="row">
+    <table class="table">
+           <thead class="table-dark">
+               <tr>
+                   <th>@Html.DisplayNameFor(d => d.rootBestMatches.bestMatches[0].Symbol)</th>
+                   <th>@Html.DisplayNameFor(d => d.rootBestMatches.bestMatches[0].Name)</th>
+                   <th>@Html.DisplayNameFor(d => d.rootBestMatches.bestMatches[0].Currency)</th>
+                   <th>@Html.DisplayNameFor(d => d.rootBestMatches.bestMatches[0].Region)</th>
+               </tr>
+           </thead>
+           <tbody>
+                @foreach (var item in Model.rootBestMatches.bestMatches)
+                {
+
+                    <tr>
+                        <td>@item.Symbol</td>
+                        <td>@item.Name</td>
+                        <td>@item.Currency</td>
+                        <td>@item.Region</td>
+                        <td>
+                            <a asp-action="Create" asp-route-id="@item.Symbol" class="btn btn-success btn-small" title="Add to My Stocks"> Add </a>
+                        </td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+</div>
+}
