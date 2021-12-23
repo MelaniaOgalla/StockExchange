@@ -1,0 +1,102 @@
+﻿@model IEnumerable<BagLib.Models.Currency>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class = "row">
+    <div class = "col-6">
+        <input id = "my-locate" type = "text" />
+        <button id="bt-locate" class = "btn btn-primary">Search</button>
+            <div class="alert alert-primary" id="my-message" role="alert">
+            Este campo es obligatorio, por favor introduzca Pais a buscar.
+            </div>
+        <button id="bt-reset" class = "btn btn-dark">Resetear</button>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </th>
+            <th>
+                Total Paises
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symbol)
+            </td>
+            <td>
+                 @item.Countries.Count()
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CurrencyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CurrencyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CurrencyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@section Scripts{
+<script>
+    function searchCutre(){
+        let country = $("#my-locate").val().toLowerCase().trim();
+        console.log(country);
+        $("tr").hide();
+
+        if(country == ""){
+            $("#my-message").show();
+        }else{
+            $("#my-message").hide();
+        }
+        $("." + country).show();
+    }
+
+    function searchLessCutre(){
+        //funcion anonima dentro del each, para usar el this y que haga referencia a los tr...
+        var country = $("#my-locate").val().toLowerCase().trim();
+        $("table tbody tr").each( function (){
+            let search = $(this).text().toLowerCase().indexOf(country)
+            //console.log($(this).text().toLowerCase().indexOf(country));
+            if(search > -1){
+                $(this).show();
+            }else{
+                $(this).hide();
+            }
+
+        });
+    }
+
+    function initialize(){
+        //busqueda parcial
+        $("#my-locate").keyup(searchLessCutre);
+    }
+
+    $().ready(initialize);
+</script>
+}
