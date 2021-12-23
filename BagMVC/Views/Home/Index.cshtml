@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}   
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <button type= "button" id="button-destroy" class="btn btn-danger">Danger</button>
+    <div class="alert alert-secondary" id="my-message" role="alert">
+  This is a secondary alert—check it out! Despediros
+</div>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@section Scripts{
+<script>
+    
+    function destroy(){
+       $("#my-message").show();
+       
+    }
+    function inicializar(){
+       $("#button-destroy").click(destroy);
+    }
+
+    $().ready(inicializar);
+</script>
+}
