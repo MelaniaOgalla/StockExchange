@@ -1,0 +1,186 @@
+{
+    "Countries": [
+        {
+            "CountryId": 757,
+            "Name": "Andorra"
+        },
+        {
+            "CountryId": 773,
+            "Name": "Belgium"
+        },
+        {
+            "CountryId": 828,
+            "Name": "Finland"
+        },
+        {
+            "CountryId": 829,
+            "Name": "France"
+        },
+        {
+            "CountryId": 836,
+            "Name": "Germany"
+        },
+        {
+            "CountryId": 864,
+            "Name": "Italy"
+        },
+        {
+            "CountryId": 931,
+            "Name": "Portugal"
+        },
+        {
+            "CountryId": 909,
+            "Name": "Netherlands"
+        },
+        {
+            "CountryId": 963,
+            "Name": "Spain"
+        },
+        {
+            "CountryId": 991,
+            "Name": "United States of America"
+        }
+    ],
+    "Currencies": [
+        {
+            "CurrencyId": 1334,
+            "Name": "Euro",
+            "Symbol": "€",
+            "Code": "EUR"
+        },
+        {
+            "CurrencyId": 1337,
+            "Name": "United States Dollar",
+            "Code": "USD",
+            "Symbol": "$"
+        }
+    ],
+    "CountryCurrency": [
+        {
+            "CountryId": 757,
+            "Name": "Andorra",
+            "Currencies": [
+                {
+                    "CurrencyId": 1334,
+                    "Name": "Euro",
+                    "Symbol": "€",
+                    "Code": "EUR"
+                }
+            ]
+        },
+        {
+            "CountryId": 773,
+            "Name": "Belgium",
+            "Currencies": [
+                {
+                    "CurrencyId": 1334,
+                    "Name": "Euro",
+                    "Symbol": "€",
+                    "Code": "EUR"
+                }
+            ]
+        },
+        {
+            "CountryId": 828,
+            "Name": "Finland",
+            "Currencies": [
+                {
+                    "CurrencyId": 1334,
+                    "Name": "Euro",
+                    "Symbol": "€",
+                    "Code": "EUR"
+                }
+            ]
+        },
+        {
+            "CountryId": 829,
+            "Name": "France",
+            "Currencies": [
+                {
+                    "CurrencyId": 1334,
+                    "Name": "Euro",
+                    "Symbol": "€",
+                    "Code": "EUR"
+                }
+            ]
+        },
+        {
+            "CountryId": 836,
+            "Name": "Germany",
+            "Currencies": [
+                {
+                    "CurrencyId": 1334,
+                    "Name": "Euro",
+                    "Symbol": "€",
+                    "Code": "EUR"
+                }
+            ]
+        },
+        {
+            "CountryId": 864,
+            "Name": "Italy",
+            "Currencies": [
+                {
+                    "CurrencyId": 1334,
+                    "Name": "Euro",
+                    "Symbol": "€",
+                    "Code": "EUR"
+                }
+            ]
+        },
+        {
+            "CountryId": 931,
+            "Name": "Portugal",
+            "Currencies": [
+                {
+                    "CurrencyId": 1334,
+                    "Name": "Euro",
+                    "Symbol": "€",
+                    "Code": "EUR"
+                }
+            ]
+        },
+        {
+            "CountryId": 909,
+            "Name": "Netherlands",
+            "Currencies": [
+                {
+                    "CurrencyId": 1334,
+                    "Name": "Euro",
+                    "Symbol": "€",
+                    "Code": "EUR"
+                }
+            ]
+        },
+        {
+            "CountryId": 963,
+            "Name": "Spain",
+            "Currencies": [
+                {
+                    "CurrencyId": 1334,
+                    "Name": "Euro",
+                    "Symbol": "€",
+                    "Code": "EUR"
+                }
+            ]
+        },
+        {
+            "CountryId": 991,
+            "Name": "United States of America",
+            "Currencies": [
+                {
+                    "CurrencyId": 1337,
+                    "Name": "United States Dollar",
+                    "Code": "USD",
+                    "Symbol": "$"
+                }
+            ]
+        }
+    ],
+    "Users" : [
+        {
+            "BagUserId": 1,
+            "Name": "Root-Bag"
+        }
+    ]
+}
