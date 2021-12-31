@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace BagLib.Models
 {
-    public enum CurrencyType { Dolar, Euro, Pound, Jen, Xian, Looni }
 
     public class Currency
     {

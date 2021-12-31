@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\APIBagLib\APICountryLib.csproj" />
+    <ProjectReference Include="..\ApiBase\ApiBase.csproj" />
     <ProjectReference Include="..\ApiStocksLib\ApiStocksLib.csproj" />
     <ProjectReference Include="..\BagLib\BagLib.csproj" />
   </ItemGroup>
