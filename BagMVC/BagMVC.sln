@@ -8,8 +8,13 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BagLib", "..\BagLib\BagLib.csproj", "{62F11BF7-F8ED-4B3B-B0F8-3E92152F3C9F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APICountryLib", "..\APIBagLib\APICountryLib.csproj", "{820E4622-2AC4-439A-BFDD-6FC72EDC0DD0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3C1F2C53-8477-40B0-8E0B-01595F685010} = {3C1F2C53-8477-40B0-8E0B-01595F685010}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiStocksLib", "..\ApiStocksLib\ApiStocksLib.csproj", "{BDA07C83-6591-405F-9485-E604640FD70A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiBase", "..\ApiBase\ApiBase.csproj", "{3C1F2C53-8477-40B0-8E0B-01595F685010}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +38,10 @@ Global
 		{BDA07C83-6591-405F-9485-E604640FD70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDA07C83-6591-405F-9485-E604640FD70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDA07C83-6591-405F-9485-E604640FD70A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1F2C53-8477-40B0-8E0B-01595F685010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1F2C53-8477-40B0-8E0B-01595F685010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1F2C53-8477-40B0-8E0B-01595F685010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1F2C53-8477-40B0-8E0B-01595F685010}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

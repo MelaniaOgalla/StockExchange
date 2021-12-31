@@ -44,6 +44,8 @@
 
                     @foreach (var c in item.Currencies)
                     {
+                        @Html.DisplayFor(m => c.Code)
+                        <span> | </span>
                         @Html.DisplayFor(m => c.Symbol)
                     }
             </td>
