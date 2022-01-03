@@ -2,20 +2,14 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using BagLib.Services.Interfaces;
-using ApiBase;
+using BagMVC.Services.Interfaces;
 using Microsoft.Extensions.Configuration;
 
-namespace BagLib.Services.Impl
+namespace BagMVC.Services.Impl
 {
     public class CountryImpl : ApiBaseClient, ICountry
     {
-
-        private static readonly CountryImpl _instance = new CountryImpl();
-
-        public static CountryImpl Instance { get { return _instance; } }
-
-        private CountryImpl() : base()
+        public CountryImpl(HttpClient httpClient) : base(httpClient)
         {
         }
 

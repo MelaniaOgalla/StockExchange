@@ -1,4 +1,6 @@
 using BagLib;
+using BagMVC.Services.Impl;
+using BagMVC.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,9 +30,17 @@ namespace BagMVC
             //services.AddControllersWithViews();
 
             var mvc = services.AddControllersWithViews();
+            services.AddHttpClient<ICountry, CountryImpl>();
+            services.AddHttpClient<ICurrency, CurrencyImpl>();
+
+            services.AddSingleton<ICountry, CountryImpl>();
+            services.AddSingleton<ICurrency, CurrencyImpl>();
+
 
             services.AddDbContext<BagContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("BagContext")));
+
+
 
 #if (DEBUG)
             mvc.AddRazorRuntimeCompilation();
