@@ -2,19 +2,13 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using BagLib.Services.Interfaces;
-using ApiBase;
+using BagMVC.Services.Interfaces;
 
-namespace BagLib.Services.Impl
+namespace BagMVC.Services.Impl
 {
     public class CurrencyImpl : ApiBaseClient, ICurrency
     {
-
-        private static readonly CurrencyImpl _instance = new CurrencyImpl();
-
-        public static CurrencyImpl Instance { get { return _instance; } }
-
-        private CurrencyImpl() : base()
+        public CurrencyImpl(HttpClient httpclient) : base(httpclient)
         {
         }
 

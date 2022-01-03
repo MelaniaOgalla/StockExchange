@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BagLib.Services.Interfaces
+namespace BagMVC.Services.Interfaces
 {
     public interface ICurrency
     {

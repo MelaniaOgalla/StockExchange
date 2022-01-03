@@ -7,19 +7,18 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BagLib;
 using BagLib.Models;
-using APICountryLib;
-using BagLib.Services.Interfaces;
-using BagLib.Services.Impl;
+using BagMVC.Services.Interfaces;
+using BagMVC.Services.Impl;
 
 namespace BagMVC.Controllers
 {
     public class CountriesController : _BaseController
     {
-        private readonly ICountry countryImpl = CountryImpl.Instance;
+        private readonly ICountry countryImpl;
 
-        public CountriesController(BagContext context) : base(context)
+        public CountriesController(BagContext context, ICountry countryImpl) : base(context)
         {
-
+            this.countryImpl = countryImpl;
         }
 
         // GET: Countries

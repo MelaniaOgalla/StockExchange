@@ -2,21 +2,19 @@
 using System;
 using System.Net.Http;
 
-namespace ApiBase
+namespace BagMVC.Services
 {
     public abstract class ApiBaseClient
     {
         protected readonly IConfiguration _configuration;
 
         protected string mUrl = "https://my-json-server.typicode.com/MelaniaOgalla/StockExhange/";
-        protected HttpClient Client { get; set; }
+        protected readonly HttpClient Client;
 
-
-
-        public ApiBaseClient()
+        public ApiBaseClient(HttpClient httpClient)
         {
             //_configuration = configuration;
-            Client = new HttpClient();
+            Client = httpClient;
             Client.BaseAddress = new Uri(mUrl);
         }
 

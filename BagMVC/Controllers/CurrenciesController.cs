@@ -7,19 +7,18 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BagLib;
 using BagLib.Models;
-using APICountryLib;
-using BagLib.Services.Interfaces;
-using BagLib.Services.Impl;
+using BagMVC.Services.Interfaces;
+using BagMVC.Services.Impl;
 
 namespace BagMVC.Controllers
 {
     public class CurrenciesController : _BaseController
     {
-        private readonly ICurrency currencyImpl = CurrencyImpl.Instance;
+        private readonly ICurrency currencyImpl;
 
-        public CurrenciesController(BagContext context) : base(context)
+        public CurrenciesController(BagContext context, ICurrency currencyImpl) : base(context)
         {
-
+            this.currencyImpl = currencyImpl;
         }
 
         // GET: Currencies
